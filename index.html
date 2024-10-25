@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLR-Bench Leaderboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    /* General Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+    body { 
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+    header { 
+      background-color: #4a90e2; 
+      padding: 20px 40px; 
+      text-align: center; 
+      color: white; 
+      border-radius: 10px; 
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    header img { vertical-align: middle; width: 60px; margin-right: 10px; }
+    header h1 { display: inline; font-size: 2em; font-weight: 700; }
+
+    .container { padding: 40px; width: 90%; max-width: 1200px; }
+    .section {
+      background: white; 
+      padding: 20px 30px; 
+      margin: 20px 0; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .section:hover { transform: translateY(-3px); }
+    h2 { font-size: 1.8em; color: #4a90e2; margin-bottom: 15px; }
+
+    /* Intro Section */
+    .intro p { font-size: 1.1em; color: #444; line-height: 1.6; }
+    .images { text-align: center; margin: 20px 0; }
+    .images img { max-width: 90%; height: auto; margin: 10px; border-radius: 10px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); }
+
+    /* Leaderboard Table Section */
+    .leaderboard p { font-size: 1.1em; color: #666; }
+    #table-container { font-size: 1.2em; text-align: center; margin-top: 15px; }
+    
+    /* Contact Section */
+    .contact a { color: #4a90e2; text-decoration: none; font-weight: bold; }
+    .contact a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { 
+      background-color: #333; 
+      color: white; 
+      text-align: center; 
+      padding: 20px 0; 
+      width: 100%; 
+      border-top: 3px solid #4a90e2;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="path_to_logo.png" alt="CLR-Bench Logo">
+  <h1>Evaluating Large Language Models in College-level Reasoning</h1>
+</header>
+
+<div class="container">
+  <!-- Intro Section -->
+  <section class="section intro">
+    <h2>About CLR-Bench</h2>
+    <p>CLR-Bench is a comprehensive benchmark designed to evaluate large language models' reasoning abilities in college-level scenarios. This leaderboard tracks the performance of various LLMs across diverse academic domains, providing insights into their strengths and areas for improvement.</p>
+  </section>
+
+  <!-- Images Section -->
+  <div class="images section">
+    <img src="path_to_running_example.png" alt="Running Example">
+    <img src="path_to_framework.png" alt="Framework Diagram">
+  </div>
+
+  <!-- Leaderboard Table -->
+  <section class="section leaderboard">
+    <h2>Leaderboard</h2>
+    <p>Here is the latest performance comparison table:</p>
+    <div id="table-container">
+      <!-- LaTeX Table Placeholder -->
+      <script type="text/javascript">
+        document.getElementById("table-container").innerHTML = `
+          $$\\begin{array}{|c|c|c|c|}
+          \\hline
+          \\text{Model} & \\text{Domain} & \\text{Score} & \\text{Ranking} \\\\
+          \\hline
+          \\text{GPT-4} & \\text{Computer Science} & 85\\% & 1 \\\\
+          \\text{LLaMA 2} & \\text{Mathematics} & 80\\% & 2 \\\\
+          \\text{Qwen} & \\text{Physics} & 78\\% & 3 \\\\
+          \\text{Meta AI} & \\text{Chemistry} & 75\\% & 4 \\\\
+          \\hline
+          \\end{array}$$`;
+      </script>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact">
+    <h2>Contact</h2>
+    <p>For inquiries or contributions, please contact us at <a href="mailto:info@clrbench.org">info@clrbench.org</a>.</p>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2024 CLR-Bench. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
 
