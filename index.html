@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     /* General Styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Comic Sans MS', sans-serif; }
     body { 
       background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
       display: flex; 
@@ -19,17 +20,18 @@
       color: #333;
     }
     header { 
-      background-color: #4a90e2; 
+      background-color: #D2691E; 
+      margin-bottom: 10px;
       padding: 20px 40px; 
       text-align: center; 
       color: white; 
-      border-radius: 10px; 
+      border-radius: 9px; 
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     }
-    header img { vertical-align: middle; width: 60px; margin-right: 10px; }
-    header h1 { display: inline; font-size: 2em; font-weight: 700; }
+    header img { vertical-align: middle; width: 100px; margin-right: 8px; }
+    header h1 { display: inline; font-size: 1.8em; font-weight: 700; color: #F5F5F5 }
 
-    .container { padding: 40px; width: 90%; max-width: 1200px; }
+    .container { padding: 2px; width: 90%; max-width: 1200px; }
     .section {
       background: white; 
       padding: 20px 30px; 
@@ -42,9 +44,9 @@
     h2 { font-size: 1.8em; color: #4a90e2; margin-bottom: 15px; }
 
     /* Intro Section */
-    .intro p { font-size: 1.1em; color: #444; line-height: 1.6; }
-    .images { text-align: center; margin: 20px 0; }
-    .images img { max-width: 90%; height: auto; margin: 10px; border-radius: 10px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); }
+    .intro p { font-size: 1em; color: #444; line-height: 1.6; }
+    .images { text-align: center; margin: 8px 0; }
+    .images img { max-width: 90%; height: auto; margin: 8px; border-radius: 10px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); }
 
     /* Leaderboard Table Section */
     .leaderboard p { font-size: 1.1em; color: #666; }
@@ -63,61 +65,866 @@
       width: 100%; 
       border-top: 3px solid #4a90e2;
     }
+     /* Button Container Styling */
+  .button-container {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  /* Button Container Styling for Center Alignment */
+  .button-container {
+    display: inline-flex; /* Inline layout to keep buttons centered */
+    gap: 10px; /* Spacing between buttons */
+    margin-top: 15px;
+  }
+pre {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+            color: #333;
+        }
+  /* Fancy Button Styling */
+  .fancy-button {
+    background-color: #458B00; /* Primary button color */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  /* Hover Effects */
+  .fancy-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+
+  /* Optional Button Shadow */
+  .fancy-button:active {
+    background-color: #3e8e41;
+    transform: scale(0.95);
+  }
+/* Wrapper Style */
+  .decorated-table {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%; /* Full width of page */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Style */
+  .decorated-table table {
+    width: 100%; /* Full width of container */
+    border-collapse: collapse;
+  }
+  
+  /* Header Styling */
+  .decorated-table th {
+    background-color: #4a90e2;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Row Styling */
+  .decorated-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Alternating Row Colors */
+  .decorated-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Highlight Specific Cells */
+  .highlighted {
+    color: purple;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  /* Hover Effect for Rows */
+  .decorated-table tr:hover {
+    background-color: #e6f2ff;
+  }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="path_to_logo.png" alt="CLR-Bench Logo">
-  <h1>Evaluating Large Language Models in College-level Reasoning</h1>
-</header>
-
+<header >
+  <img src="images/logo.png" alt="CLR-Bench Logo" style="width: 100px; height: auto;">
+  <h1><b>CLR-Bench</b>: Evaluating Large Language Models in College-level Reasoning</h1>
+  <p style="font-size: 20px; line-height: 1.2;">
+    Junnan Dong, Zijin Hong, Yuanchen Bei, Feiran Huang, Xinrun Wang, Xiao Huang</p><br>
+  <p style="font-size: 16px;">The Hong Kong Polytechnic University, Jinan University, Singapore Management University
+  </p>
+</header>  
+<!-- Fancy Buttons Section -->
+  <div class="button-container" style="text-align: center;">
+    <a href="link-to-code" class="fancy-button" target="_blank">🧷 Code</a>
+    <a href="https://arxiv.org/abs/2410.17558" class="fancy-button" target="_blank">📜 Paper</a>
+    <a href="link-to-github-stars" class="fancy-button" target="_blank">🚩 GitHub</a>  </div>
+  
+<div class="images section">
+  <img src="images/running.png" alt="Running Example" style="width: 900px; height: auto;">
+</div>
 <div class="container">
   <!-- Intro Section -->
   <section class="section intro">
-    <h2>About CLR-Bench</h2>
-    <p>CLR-Bench is a comprehensive benchmark designed to evaluate large language models' reasoning abilities in college-level scenarios. This leaderboard tracks the performance of various LLMs across diverse academic domains, providing insights into their strengths and areas for improvement.</p>
+<h2 style="font-size: 18px;">Sketched Overview</h2>
+    <p> Large language models (LLMs) have demonstrated their remarkable performance across various language understanding tasks. While emerging benchmarks have been proposed to evaluate LLMs in various domains such as mathematics and computer science, they merely measure the accuracy in terms of the final prediction on multi-choice questions. However, it remains insufficient to verify the essential understanding of LLMs given a chosen choice.
+    To fill this gap, we present <b>CLR-Bench</b> to comprehensively evaluate the LLMs in complex college-level reasoning.<br><br></p>
+    <b>Contributions</b>:<br>
+    <p  style="font-size: 14px;">
+    📌 we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 1018 questions in 5 types, i.e., Multi-choice (MC), Multi-select (MS), Fill-in-blank (FB), Open-ended (OE), True-or-false (TF), each associated with detailed explanations from experts.<br>
+    ⚖  We formalize the criteria with two novel metrics: <br>
+   <b><span style="color: #8B1A1A;"> Q→A </span></b> to measure the performance of direct <b><u>a</u></b>nswer prediction, and <b> <span style="color: #8B1A1A;"> Q→AR </span> </b>to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously.<br><br></p>
+    <b>Key Insignts</b>:<br>
+    <p  style="font-size: 14px;">
+    🤔 LLMs are potentially '<b><i>guessing</i></b>' the answers for college-level questions, instead of truly understanding the rationale with a dramatically dropping Q→AR.<br>
+    🔍 Model sizes do <b>not</b> inherently guarantee superior performance in reasoning, despite larger models often achieving higher accuracy in Q→A. Several smaller models notably exhibit stronger performance in Q→AR, surpassing larger ones to provide accurate and coherent rationales.</p>
   </section>
+	
+<!-- <div id="leaderboard-section">
+    <h2 style="font-size: 18px;">CLR-Bench Leaderboard</h2>
+    <div id="image-container">
+        <img src="images/leaderboard.png" alt="CLR-Bench Leaderboard" style="width:100%; max-width:1200px;"/>
+    </div>
+</div>  -->
+<div class="decorated-table">
+<table class="leaderboard-table">
+  <thead>
+    <tr>
+<!--       <th>#</th>
+      <th>LLM Families</th>
+      <th>Q→A</th>
+      <th>Q→AR</th>
+    </tr> -->
+    <tr>
+      <th>#</th>
+      <th>Models</th>
+      <th colspan="6">Q->A (Direct performance of prediction)</th> 
+
+      <th colspan="6">Q->AR (Reasoning performance of rationale)</th>
+
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>MC</td>
+      <td>MS</td>
+      <td>TF</td>
+      <td>FB</td>
+      <td>OE</td>
+      <td>Q->A</td>
+      <td>MC</td>
+      <td>MS</td>
+      <td>TF</td>
+      <td>FB</td>
+      <td>OE</td>
+      <td>Q->AR</td>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+      <td>1</td>
+      <td>qwen2.5-32b-instruct</td>
+      <td>80.18</td>
+      <td>75.23</td>
+      <td>63.29</td>
+      <td>44.76</td>
+      <td>52.04</td>
+      <td>63.31</td>
+      <td>55.41</td>
+      <td>45.50</td>
+      <td>56.0</td>
+      <td>48.33</td>
+      <td>11.80</td>
+      <td><span style="color: purple; text-decoration: underline; font-weight: bold;">42.29</span></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>deepseek-chat</td>
+      <td>78.80</td>
+      <td>77.03</td>
+      <td>62.66</td>
+      <td>40.95</td>
+      <td>51.30</td>
+      <td>62.43</td>
+      <td>55.41</td>
+      <td>44.14</td>
+      <td>55.14</td>
+      <td>46.43</td>
+      <td>13.48</td>
+      <td><span style="color: orange; text-decoration: underline; font-weight: bold;">42.09</span></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>gpt-4o</td>
+      <td>84.33</td>
+      <td>76.58</td>
+      <td>63.92</td>
+      <td>54.29</td>
+      <td>34.01</td>
+      <td>60.76</td>
+      <td>53.11</td>
+      <td>44.82</td>
+      <td>57.52</td>
+      <td>51.19</td>
+      <td>8.55</td>
+      <td>41.60</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>qwen2.5-72b-instruct</td>
+      <td>81.11</td>
+      <td>77.93</td>
+      <td>63.61</td>
+      <td>45.71</td>
+      <td>52.23</td>
+      <td>64.05</td>
+      <td>50.58</td>
+      <td>45.50</td>
+      <td>53.56</td>
+      <td>48.10</td>
+      <td>13.10</td>
+      <td>40.79</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>gpt-4-turbo</td>
+      <td>82.49</td>
+      <td>78.38</td>
+      <td>63.92</td>
+      <td>50.48</td>
+      <td>45.91</td>
+      <td>63.31</td>
+      <td>51.73</td>
+      <td>45.95</td>
+      <td>49.45</td>
+      <td>51.43</td>
+      <td>8.74</td>
+      <td>39.00</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>claude-3-opus</td>
+      <td>80.18</td>
+      <td>81.53</td>
+      <td>62.66</td>
+      <td>52.38</td>
+      <td>44.42</td>
+      <td>62.57</td>
+      <td>50.35</td>
+      <td>43.02</td>
+      <td>50.08</td>
+      <td>50.00</td>
+      <td>9.20</td>
+      <td>38.56</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>claude-3-sonnet</td>
+      <td>76.96</td>
+      <td>76.58</td>
+      <td>59.81</td>
+      <td>42.86</td>
+      <td>48.33</td>
+      <td>60.51</td>
+      <td>50.69</td>
+      <td>44.59</td>
+      <td>48.26</td>
+      <td>45.95</td>
+      <td>11.80</td>
+      <td>38.51</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>qwen2.5-72b</td>
+      <td>80.18</td>
+      <td>73.42</td>
+      <td>60.44</td>
+      <td>47.62</td>
+      <td>52.04</td>
+      <td>62.52</td>
+      <td>50.00</td>
+      <td>43.02</td>
+      <td>45.97</td>
+      <td>49.52</td>
+      <td>11.99</td>
+      <td>37.89</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>phi-3-medium-4k-instruct</td>
+      <td>74.65</td>
+      <td>63.96</td>
+      <td>56.01</td>
+      <td>38.10</td>
+      <td>48.88</td>
+      <td>57.12</td>
+      <td>51.50</td>
+      <td>33.56</td>
+      <td>49.68</td>
+      <td>44.05</td>
+      <td>11.34</td>
+      <td>37.60</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>qwen2.5-7b-instruct</td>
+      <td>70.97</td>
+      <td>63.06</td>
+      <td>58.23</td>
+      <td>37.14</td>
+      <td>49.26</td>
+      <td>56.93</td>
+      <td>52.65</td>
+      <td>34.23</td>
+      <td>50.32</td>
+      <td>41.90</td>
+      <td>8.92</td>
+      <td>37.25</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>gemini-1.5-pro</td>
+      <td>78.34</td>
+      <td>71.62</td>
+      <td>55.38</td>
+      <td>46.67</td>
+      <td>52.42</td>
+      <td>60.36</td>
+      <td>50.46</td>
+      <td>40.54</td>
+      <td>43.35</td>
+      <td>50.24</td>
+      <td>12.83</td>
+      <td>37.21</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>phi-3-mini-4k-instruct</td>
+      <td>69.12</td>
+      <td>59.46</td>
+      <td>55.38</td>
+      <td>34.29</td>
+      <td>44.80</td>
+      <td>53.78</td>
+      <td>49.42</td>
+      <td>37.84</td>
+      <td>45.41</td>
+      <td>41.43</td>
+      <td>9.57</td>
+      <td>35.56</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>gpt-3.5-turbo</td>
+      <td>63.13</td>
+      <td>66.67</td>
+      <td>5854</td>
+      <td>23.81</td>
+      <td>47.77</td>
+      <td>53.98</td>
+      <td>42.51</td>
+      <td>41.22</td>
+      <td>49.60</td>
+      <td>39.29</td>
+      <td>6.41</td>
+      <td>34.70</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>gemma2-9b-it</td>
+      <td>72.81</td>
+      <td>50.45</td>
+      <td>55.70</td>
+      <td>43.81</td>
+      <td>40.52</td>
+      <td>53.54</td>
+      <td>45.62</td>
+      <td>32.88</td>
+      <td>47.15</td>
+      <td>44.52</td>
+      <td>7.90</td>
+      <td>34.63</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>yi-1.5-34b-chat</td>
+      <td>68.66</td>
+      <td>53.60</td>
+      <td>56.96</td>
+      <td>40.95</td>
+      <td>39.96</td>
+      <td>52.95</td>
+      <td>40.90</td>
+      <td>33.33</td>
+      <td>48.34</td>
+      <td>44.76</td>
+      <td>7.16</td>
+      <td>33.87</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>llama-3.1-70b-instruct</td>
+      <td>80.18</td>
+      <td>74.77</td>
+      <td>61.39</td>
+      <td>40.00</td>
+      <td>44.61</td>
+      <td>60.22</td>
+      <td>44.24</td>
+      <td>38.06</td>
+      <td>45.09</td>
+      <td>38.57</td>
+      <td>7.99</td>
+      <td>33.67</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>llama-3.1-70b</td>
+      <td>75.58</td>
+      <td>51.80</td>
+      <td>5759</td>
+      <td>45.71</td>
+      <td>47.77</td>
+      <td>56.97</td>
+      <td>43.89</td>
+      <td>35.81</td>
+      <td>41.46</td>
+      <td>45.48</td>
+      <td>10.50</td>
+      <td>33.60</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>qwen2.5-7b</td>
+      <td>69.12</td>
+      <td>54.95</td>
+      <td>54.11</td>
+      <td>40.00</td>
+      <td>49.07</td>
+      <td>54.62</td>
+      <td>43.55</td>
+      <td>34.46</td>
+      <td>43.43</td>
+      <td>45.00</td>
+      <td>8.36</td>
+      <td>33.37</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>yi-1.5-34b</td>
+      <td>70.97</td>
+      <td>58.11</td>
+      <td>5759</td>
+      <td>41.90</td>
+      <td>48.33</td>
+      <td>56.43</td>
+      <td>40.55</td>
+      <td>35.59</td>
+      <td>42.96</td>
+      <td>43.10</td>
+      <td>7.25</td>
+      <td>32.22</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>llama-3-8b-instruct</td>
+      <td>60.83</td>
+      <td>49.55</td>
+      <td>52.22</td>
+      <td>29.52</td>
+      <td>47.40</td>
+      <td>50.15</td>
+      <td>43.78</td>
+      <td>26.35</td>
+      <td>41.30</td>
+      <td>36.19</td>
+      <td>9.76</td>
+      <td>31.34</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>mixtral-8x7b-instruct-v0.1</td>
+      <td>59.91</td>
+      <td>45.05</td>
+      <td>34.18</td>
+      <td>16.19</td>
+      <td>43.12</td>
+      <td>41.36</td>
+      <td>42.97</td>
+      <td>31.31</td>
+      <td>39.08</td>
+      <td>34.52</td>
+      <td>8.36</td>
+      <td>30.48</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>llama-3.1-8b-instruct</td>
+      <td>63.13</td>
+      <td>51.80</td>
+      <td>56.96</td>
+      <td>25.71</td>
+      <td>41.82</td>
+      <td>50.49</td>
+      <td>39.06</td>
+      <td>22.97</td>
+      <td>41.85</td>
+      <td>33.57</td>
+      <td>8.55</td>
+      <td>29.54</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>mixtral-8x7b-v0.1</td>
+      <td>67.28</td>
+      <td>39.64</td>
+      <td>53.48</td>
+      <td>39.05</td>
+      <td>45.72</td>
+      <td>51.38</td>
+      <td>39.06</td>
+      <td>31.53</td>
+      <td>36.00</td>
+      <td>36.19</td>
+      <td>8.83</td>
+      <td>29.00</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>llama-3.2-3b-instruct</td>
+      <td>57.14</td>
+      <td>39.19</td>
+      <td>49.05</td>
+      <td>23.81</td>
+      <td>34.94</td>
+      <td>43.37</td>
+      <td>40.55</td>
+      <td>21.40</td>
+      <td>38.29</td>
+      <td>32.62</td>
+      <td>8.09</td>
+      <td>28.36</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>yi-1.5-6b</td>
+      <td>53.00</td>
+      <td>59.01</td>
+      <td>51.27</td>
+      <td>30.48</td>
+      <td>42.75</td>
+      <td>48.08</td>
+      <td>33.53</td>
+      <td>29.95</td>
+      <td>39.16</td>
+      <td>35.00</td>
+      <td>6.13</td>
+      <td>27.80</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>qwen1.5-7b</td>
+      <td>58.99</td>
+      <td>54.50</td>
+      <td>47.15</td>
+      <td>37.14</td>
+      <td>38.29</td>
+      <td>47.10</td>
+      <td>36.64</td>
+      <td>33.11</td>
+      <td>32.99</td>
+      <td>35.95</td>
+      <td>6.78</td>
+      <td>27.16</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>mistral-7b-v0.1</td>
+      <td>58.06</td>
+      <td>42.79</td>
+      <td>50.63</td>
+      <td>37.14</td>
+      <td>43.87</td>
+      <td>48.18</td>
+      <td>33.06</td>
+      <td>29.05</td>
+      <td>34.10</td>
+      <td>35.24</td>
+      <td>7.16</td>
+      <td>26.33</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>mistral-7b-instruct-v0.1</td>
+      <td>57.60</td>
+      <td>45.05</td>
+      <td>40.82</td>
+      <td>21.90</td>
+      <td>42.19</td>
+      <td>43.27</td>
+      <td>35.48</td>
+      <td>27.48</td>
+      <td>34.41</td>
+      <td>33.33</td>
+      <td>6.04</td>
+      <td>26.28</td>
+    </tr>
+    <tr>
+      <td>29.0</td>
+      <td>llama-3.1-8b</td>
+      <td>62.67</td>
+      <td>40.54</td>
+      <td>5158</td>
+      <td>30.48</td>
+      <td>44.98</td>
+      <td>48.82</td>
+      <td>34.22</td>
+      <td>28.83</td>
+      <td>32.52</td>
+      <td>33.57</td>
+      <td>7.99</td>
+      <td>26.11</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>openchat-3.5</td>
+      <td>60.83</td>
+      <td>39.64</td>
+      <td>49.68</td>
+      <td>25.71</td>
+      <td>36.25</td>
+      <td>44.94</td>
+      <td>35.94</td>
+      <td>22.75</td>
+      <td>33.86</td>
+      <td>30.24</td>
+      <td>8.46</td>
+      <td>26.01</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>yi-1.5-6b-chat</td>
+      <td>37.33</td>
+      <td>53.15</td>
+      <td>48.10</td>
+      <td>25.71</td>
+      <td>38.85</td>
+      <td>41.60</td>
+      <td>30.30</td>
+      <td>32.43</td>
+      <td>32.99</td>
+      <td>34.05</td>
+      <td>6.88</td>
+      <td>25.56</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>llama-3-8b</td>
+      <td>59.91</td>
+      <td>35.14</td>
+      <td>50.95</td>
+      <td>26.67</td>
+      <td>43.31</td>
+      <td>46.61</td>
+      <td>32.37</td>
+      <td>24.10</td>
+      <td>31.09</td>
+      <td>29.29</td>
+      <td>7.53</td>
+      <td>24.19</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>deepseek-7b-chat</td>
+      <td>49.31</td>
+      <td>27.48</td>
+      <td>45.57</td>
+      <td>20.00</td>
+      <td>31.41</td>
+      <td>38.02</td>
+      <td>30.76</td>
+      <td>18.92</td>
+      <td>34.97</td>
+      <td>27.62</td>
+      <td>5.11</td>
+      <td>23.67</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>qwen1.5-7b-chat</td>
+      <td>32.26</td>
+      <td>50.00</td>
+      <td>11.71</td>
+      <td>13.33</td>
+      <td>35.32</td>
+      <td>26.67</td>
+      <td>27.42</td>
+      <td>26.58</td>
+      <td>27.22</td>
+      <td>33.57</td>
+      <td>6.41</td>
+      <td>22.35</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>llama-2-7b-chat</td>
+      <td>38.25</td>
+      <td>36.49</td>
+      <td>39.24</td>
+      <td>13.33</td>
+      <td>35.50</td>
+      <td>35.07</td>
+      <td>26.04</td>
+      <td>16.89</td>
+      <td>31.49</td>
+      <td>26.67</td>
+      <td>5.30</td>
+      <td>21.32</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>deepseek-7b-base</td>
+      <td>49.77</td>
+      <td>36.49</td>
+      <td>44.94</td>
+      <td>18.10</td>
+      <td>36.62</td>
+      <td>40.08</td>
+      <td>27.88</td>
+      <td>18.47</td>
+      <td>28.16</td>
+      <td>25.24</td>
+      <td>5.39</td>
+      <td>20.73</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>llama-2-7b</td>
+      <td>54.38</td>
+      <td>15.77</td>
+      <td>44.62</td>
+      <td>19.05</td>
+      <td>36.43</td>
+      <td>38.75</td>
+      <td>26.61</td>
+      <td>18.47</td>
+      <td>27.29</td>
+      <td>24.05</td>
+      <td>6.78</td>
+      <td>20.43</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>llama-3.2-1b-instruct</td>
+      <td>41.47</td>
+      <td>40.99</td>
+      <td>37.66</td>
+      <td>14.29</td>
+      <td>25.09</td>
+      <td>33.10</td>
+      <td>28.00</td>
+      <td>13.06</td>
+      <td>24.68</td>
+      <td>24.76</td>
+      <td>6.69</td>
+      <td>19.38</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>gemma-7b-it</td>
+      <td>15.21</td>
+      <td>37.84</td>
+      <td>45.25</td>
+      <td>8.57</td>
+      <td>13.38</td>
+      <td>25.83</td>
+      <td>13.02</td>
+      <td>1.80</td>
+      <td>35.52</td>
+      <td>20.24</td>
+      <td>10.04</td>
+      <td>18.74</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>gemma2-9b</td>
+      <td>16.13</td>
+      <td>47.75</td>
+      <td>11.71</td>
+      <td>9.52</td>
+      <td>11.34</td>
+      <td>16.26</td>
+      <td>11.29</td>
+      <td>8.33</td>
+      <td>10.60</td>
+      <td>11.67</td>
+      <td>3.62</td>
+      <td>8.77</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
   <!-- Images Section -->
   <div class="images section">
-    <img src="path_to_running_example.png" alt="Running Example">
-    <img src="path_to_framework.png" alt="Framework Diagram">
+    <h2 style="font-size: 18px;">Overall framework and pipeline</h2>
+    <img src="images/figure1.png" alt="Framework Diagram">
+    <p style="font-size: 16px;">The overview of our proposed <b>CLR-Bench</b>. <b>Dataset Construction</b>. Domain experts first curate a condensed hierarchical topic graph to guide the collection of five types of questions. GPT-4o is then carefully instructed to assist the experts in gold rationale generation. <b>Benchmark Evaluation</b>. We formally define standardized criteria for each type of question and the corresponding rationale. </p>
   </div>
+<br>	
 
-  <!-- Leaderboard Table -->
-  <section class="section leaderboard">
-    <h2>Leaderboard</h2>
-    <p>Here is the latest performance comparison table:</p>
-    <div id="table-container">
-      <!-- LaTeX Table Placeholder -->
-      <script type="text/javascript">
-        document.getElementById("table-container").innerHTML = `
-          $$\\begin{array}{|c|c|c|c|}
-          \\hline
-          \\text{Model} & \\text{Domain} & \\text{Score} & \\text{Ranking} \\\\
-          \\hline
-          \\text{GPT-4} & \\text{Computer Science} & 85\\% & 1 \\\\
-          \\text{LLaMA 2} & \\text{Mathematics} & 80\\% & 2 \\\\
-          \\text{Qwen} & \\text{Physics} & 78\\% & 3 \\\\
-          \\text{Meta AI} & \\text{Chemistry} & 75\\% & 4 \\\\
-          \\hline
-          \\end{array}$$`;
-      </script>
-    </div>
-  </section>
+<div class="images section">
+  <h2 style="font-size: 18px;">Observations and Findings</h2>
+
+  <!-- First image with text below -->
+  <img src="images/bar.png" alt="Bar Chart">
+  <p style="font-size: 16px; text-align: center;">
+    <b>LLMs tend to ‘guess’ answers. </b><br> A detailed analysis of Q→AR scores reveals that despite their relatively high accuracy in answering questions (Q→A), many LLMs struggle significantly to provide coherent and accurate rationales.
+  </p>
+	<br>
+
+  <!-- Second image with text below -->
+  <img src="images/radar.png" alt="Radar Chart">
+  <p style="font-size: 16px; text-align: center;">
+    <b>LLMs are not good at non-MC questions.</b> <br> We visualize the radar diagrams to showcase the expertise of LLMs on different types of questions. Performance on non-MC questions presents another significant challenge for LLMs. Many models demonstrate reasonable performance on MC, yet their accuracy drops significantly when handling OE or FB questions, which require deeper reasoning and articulation.
+  </p>
+<br>
+  <!-- Third image with text on the right -->
+  <div style="display: flex; align-items: center; gap: 20px;">
+    <img src="images/topic.png" alt="Topic Chart" style="width: 400px; height: 600px">
+    <p style="font-size: 16px;">
+	<b>Discipline-specific insights</b><br>
+      \((i)\) <b>Context-intensive tasks</b>. Topics such as AI Introduction and Ethics of CS and AI require a solid understanding of conceptual frameworks. All three state-of-the-art LLMs demonstrate a surprisingly low performance with around 12.5% and 6.5% Q→AR. This suggests challenges in grasping nuanced ethical considerations. Similarly, scores in the AI Introduction domain reflect the models’ difficulty in conveying complex ideas coherently. These results highlight that while LLMs possess substantial factual knowledge, they often struggle with articulating and rationalizing that knowledge in contextually rich environments.
+      <br><br><br>
+      \((ii)\) <b>Reasoning-intensive tasks</b>. Mathematics and Computer Architecture reflect a different situation compared with context-intensive tasks. All three models could perform significantly satisfying the Q→A criteria; however, their performance decreases sharply on Q→AR with over a 30% accuracy drop in average. This reflects the necessity for improved training techniques that focus on fostering deeper cognition for reasoning-intensive tasks.
+    </p>
+  </div>
+</div>
 
   <!-- Contact Section -->
   <section class="section contact">
     <h2>Contact</h2>
-    <p>For inquiries or contributions, please contact us at <a href="mailto:info@clrbench.org">info@clrbench.org</a>.</p>
+    <p>For inquiries or contributions, please contact us at <a href="mailto:hanson.dong@connect.polyu.hk">hanson.dong@connect.polyu.hk</a>.</p>
   </section>
 </div>
 
 <footer>
-  <p>&copy; 2024 CLR-Bench. All rights reserved.</p>
+  <p>&copy; 2024 CLR-Bench. DEEP Lab, The Hong Kong Polytechnic University. All rights reserved.</p>
 </footer>
 
 </body>
 </html>
-
