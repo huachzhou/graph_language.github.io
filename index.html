@@ -161,7 +161,7 @@ pre {
 <body>
 
 <header >
-  <img src="images/logo.png" alt="CLR-Bench Logo" style="width: 100px; height: auto;">
+  <img src="assets/logo.png" alt="CLR-Bench Logo" style="width: 100px; height: auto;">
   <h1><b>CLR-Bench</b>: Evaluating Large Language Models in College-level Reasoning</h1>
   <p style="font-size: 20px; line-height: 1.2;">
     Junnan Dong, Zijin Hong, Yuanchen Bei, Feiran Huang, Xinrun Wang, Xiao Huang</p><br>
@@ -175,7 +175,7 @@ pre {
     <a href="link-to-github-stars" class="fancy-button" target="_blank">🚩 GitHub</a>  </div>
   
 <div class="images section">
-  <img src="images/running.png" alt="Running Example" style="width: 900px; height: auto;">
+  <img src="assets/running.png" alt="Running Example" style="width: 900px; height: auto;">
 </div>
 <div class="container">
   <!-- Intro Section -->
@@ -197,7 +197,7 @@ pre {
 <!-- <div id="leaderboard-section">
     <h2 style="font-size: 18px;">CLR-Bench Leaderboard</h2>
     <div id="image-container">
-        <img src="images/leaderboard.png" alt="CLR-Bench Leaderboard" style="width:100%; max-width:1200px;"/>
+        <img src="assets/leaderboard.png" alt="CLR-Bench Leaderboard" style="width:100%; max-width:1200px;"/>
     </div>
 </div>  -->
 <div class="decorated-table">
@@ -882,7 +882,7 @@ pre {
   <!-- Images Section -->
   <div class="images section">
     <h2 style="font-size: 18px;">Overall framework and pipeline</h2>
-    <img src="images/figure1.png" alt="Framework Diagram">
+    <img src="assets/figure1.png" alt="Framework Diagram">
     <p style="font-size: 16px;">The overview of our proposed <b>CLR-Bench</b>. <b>Dataset Construction</b>. Domain experts first curate a condensed hierarchical topic graph to guide the collection of five types of questions. GPT-4o is then carefully instructed to assist the experts in gold rationale generation. <b>Benchmark Evaluation</b>. We formally define standardized criteria for each type of question and the corresponding rationale. </p>
   </div>
 <br>	
@@ -891,21 +891,21 @@ pre {
   <h2 style="font-size: 18px;">Observations and Findings</h2>
 
   <!-- First image with text below -->
-  <img src="images/bar.png" alt="Bar Chart">
+  <img src="assets/bar.png" alt="Bar Chart">
   <p style="font-size: 16px; text-align: center;">
     <b>LLMs tend to ‘guess’ answers. </b><br> A detailed analysis of Q→AR scores reveals that despite their relatively high accuracy in answering questions (Q→A), many LLMs struggle significantly to provide coherent and accurate rationales.
   </p>
 	<br>
 
   <!-- Second image with text below -->
-  <img src="images/radar.png" alt="Radar Chart">
+  <img src="assets/radar.png" alt="Radar Chart">
   <p style="font-size: 16px; text-align: center;">
     <b>LLMs are not good at non-MC questions.</b> <br> We visualize the radar diagrams to showcase the expertise of LLMs on different types of questions. Performance on non-MC questions presents another significant challenge for LLMs. Many models demonstrate reasonable performance on MC, yet their accuracy drops significantly when handling OE or FB questions, which require deeper reasoning and articulation.
   </p>
 <br>
   <!-- Third image with text on the right -->
   <div style="display: flex; align-items: center; gap: 20px;">
-    <img src="images/topic.png" alt="Topic Chart" style="width: 400px; height: 600px">
+    <img src="assets/topic.png" alt="Topic Chart" style="width: 400px; height: 600px">
     <p style="font-size: 16px;">
 	<b>Discipline-specific insights</b><br>
       \((i)\) <b>Context-intensive tasks</b>. Topics such as AI Introduction and Ethics of CS and AI require a solid understanding of conceptual frameworks. All three state-of-the-art LLMs demonstrate a surprisingly low performance with around 12.5% and 6.5% Q→AR. This suggests challenges in grasping nuanced ethical considerations. Similarly, scores in the AI Introduction domain reflect the models’ difficulty in conveying complex ideas coherently. These results highlight that while LLMs possess substantial factual knowledge, they often struggle with articulating and rationalizing that knowledge in contextually rich environments.
