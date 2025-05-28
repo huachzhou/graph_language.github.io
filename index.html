@@ -171,7 +171,7 @@ pre {
 <!-- Fancy Buttons Section -->
   <div class="button-container" style="text-align: center;">
     <a href="link-to-code" class="fancy-button" target="_blank">🧷 Code</a>
-    <a href="https://arxiv.org/abs/2410.17558" class="fancy-button" target="_blank">📜 Paper</a>
+    <a href="https://arxiv.org/abs/2501.11478" class="fancy-button" target="_blank">📜 Paper</a>
     <a href="link-to-github-stars" class="fancy-button" target="_blank">🚩 GitHub</a>  </div>
   
 <div class="images section">
@@ -182,16 +182,14 @@ pre {
   <section class="section intro">
 <h2 style="font-size: 18px;">Sketched Overview</h2>
     <p> GDL4LLM introduces a novel approach to text-attributed graph learning with LLMs by treating graphs as a language rather than using natural language descriptions. Recognizing that natural language is too verbose and unstructured for modeling complex graph relationships, GDL4LLM translates graphs into a concise corpus on which LLMs can be pre-trained. This enables efficient representation of subgraphs with minimal tokens during fine-tuning. Experiments on real-world datasets show GDL4LLM outperforms description-based and embedding-based approaches by effectively modeling multi-hop neighborhoods.<br><br></p>
-    <b>Contributions</b>:<br>
-    <p  style="font-size: 14px;">
-    📌 we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 1018 questions in 5 types, i.e., Multi-choice (MC), Multi-select (MS), Fill-in-blank (FB), Open-ended (OE), True-or-false (TF), each associated with detailed explanations from experts.<br>
-    ⚖  We formalize the criteria with two novel metrics: <br>
-   <b><span style="color: #8B1A1A;"> Q→A </span></b> to measure the performance of direct <b><u>a</u></b>nswer prediction, and <b> <span style="color: #8B1A1A;"> Q→AR </span> </b>to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously.<br><br></p>
-    <b>Key Insignts</b>:<br>
-    <p  style="font-size: 14px;">
-    🤔 LLMs are potentially '<b><i>guessing</i></b>' the answers for college-level questions, instead of truly understanding the rationale with a dramatically dropping Q→AR.<br>
-    🔍 Model sizes do <b>not</b> inherently guarantee superior performance in reasoning, despite larger models often achieving higher accuracy in Q→A. Several smaller models notably exhibit stronger performance in Q→AR, surpassing larger ones to provide accurate and coherent rationales.</p>
-  </section>
+<b>Contributions</b>:<br>
+<p style="font-size: 14px;">
+📌 We convert the problem of modeling graph structures for LLMs into a graph language learning problem. We justify this approach by proving that the graph language learning objective enables LLMs to learn graph structural information.<br><br>
+
+🔧 We introduce GDL4LLM, a simple yet effective framework. It generates a graph language corpus from the given graph and pre-trains LLMs on this corpus to understand the graph. The framework then samples from the graph language corpus to represent subgraphs centered around target nodes for fine-tuning on downstream tasks.<br><br>
+
+📊 Through extensive experiments on three real-world datasets, we demonstrate that GDL4LLM outperforms competitive baselines. It surpasses both description-based and textual attribute embedding-based approaches by efficiently modeling different orders of neighbors with LLMs.
+</p>
 	
 <!-- <div id="leaderboard-section">
     <h2 style="font-size: 18px;">CLR-Bench Leaderboard</h2>
