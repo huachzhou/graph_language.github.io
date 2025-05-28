@@ -162,10 +162,10 @@ pre {
 
 <header >
   <img src="assets/logo.png" alt="CLR-Bench Logo" style="width: 100px; height: auto;">
-  <h1><b>CLR-Bench</b>: Evaluating Large Language Models in College-level Reasoning</h1>
+  <h1><b>GDL4LLM</b>: Each graph is a new language: Graph Learning with LLMs</h1>
   <p style="font-size: 20px; line-height: 1.2;">
-    Junnan Dong, Zijin Hong, Yuanchen Bei, Feiran Huang, Xinrun Wang, Xiao Huang</p><br>
-  <p style="font-size: 16px;">The Hong Kong Polytechnic University, Jinan University, Singapore Management University
+    Huachi Zhou, Jiahe Du, Chuang Zhou, Chang Yang, Yilin Xiao, Yuxuan Xie, Xiao Huang</p><br>
+  <p style="font-size: 16px;">The Hong Kong Polytechnic University
   </p>
 </header>  
 <!-- Fancy Buttons Section -->
@@ -181,8 +181,7 @@ pre {
   <!-- Intro Section -->
   <section class="section intro">
 <h2 style="font-size: 18px;">Sketched Overview</h2>
-    <p> Large language models (LLMs) have demonstrated their remarkable performance across various language understanding tasks. While emerging benchmarks have been proposed to evaluate LLMs in various domains such as mathematics and computer science, they merely measure the accuracy in terms of the final prediction on multi-choice questions. However, it remains insufficient to verify the essential understanding of LLMs given a chosen choice.
-    To fill this gap, we present <b>CLR-Bench</b> to comprehensively evaluate the LLMs in complex college-level reasoning.<br><br></p>
+    <p> GDL4LLM introduces a novel approach to text-attributed graph learning with LLMs by treating graphs as a language rather than using natural language descriptions. Recognizing that natural language is too verbose and unstructured for modeling complex graph relationships, GDL4LLM translates graphs into a concise corpus on which LLMs can be pre-trained. This enables efficient representation of subgraphs with minimal tokens during fine-tuning. Experiments on real-world datasets show GDL4LLM outperforms description-based and embedding-based approaches by effectively modeling multi-hop neighborhoods.<br><br></p>
     <b>Contributions</b>:<br>
     <p  style="font-size: 14px;">
     📌 we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 1018 questions in 5 types, i.e., Multi-choice (MC), Multi-select (MS), Fill-in-blank (FB), Open-ended (OE), True-or-false (TF), each associated with detailed explanations from experts.<br>
