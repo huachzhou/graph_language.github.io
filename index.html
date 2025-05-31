@@ -201,681 +201,213 @@ pre {
 <table class="leaderboard-table">
   <thead>
     <tr>
-<!--       <th>#</th>
-      <th>LLM Families</th>
-      <th>Q→A</th>
-      <th>Q→AR</th>
-    </tr> -->
-    <tr>
-      <th>#</th>
-      <th>Models</th>
-      <th colspan="6">Q->A (Direct performance of prediction)</th> 
-
-      <th colspan="6">Q->AR (Reasoning performance of rationale)</th>
-
+      <th colspan="8">Node classification performance comparison among baselines w.r.t. micro classification accuracy across three datasets.</th>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td>MC</td>
-      <td>MS</td>
-      <td>TF</td>
-      <td>FB</td>
-      <td>OE</td>
-      <td>Q->A</td>
-      <td>MC</td>
-      <td>MS</td>
-      <td>TF</td>
-      <td>FB</td>
-      <td>OE</td>
-      <td>Q->AR</td>
+      <th rowspan="2"><b>NLP Models</b></th>
+      <th rowspan="2"><b>GNNs</b></th>
+      <th colspan="2"><b>ACM</b></th>
+      <th colspan="2"><b>Wiki</b></th>
+      <th colspan="2"><b>Amazon</b></th>
+    </tr>
+    <tr>
+      <th>Val.</th>
+      <th>Test</th>
+      <th>Val.</th>
+      <th>Test</th>
+      <th>Val.</th>
+      <th>Test</th>
     </tr>
   </thead>
   <tbody>
-<tr>
-      <td>1</td>
-      <td>qwen2.5-32b-instruct</td>
-      <td>80.18</td>
-      <td>75.23</td>
-      <td>63.29</td>
-      <td>44.76</td>
-      <td>52.04</td>
-      <td>63.31</td>
-      <td>55.41</td>
-      <td>45.50</td>
-      <td>56.0</td>
-      <td>48.33</td>
-      <td>11.80</td>
-      <td><span style="color: purple; text-decoration: underline; font-weight: bold;">42.29</span></td>
+    <tr>
+      <td colspan="8" style="text-align: center;"><b>Fine-tuned LMs + GNNs</b></td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>deepseek-chat</td>
-      <td>78.80</td>
-      <td>77.03</td>
-      <td>62.66</td>
-      <td>40.95</td>
-      <td>51.30</td>
-      <td>62.43</td>
-      <td>55.41</td>
-      <td>44.14</td>
-      <td>55.14</td>
-      <td>46.43</td>
-      <td>13.48</td>
-      <td><span style="color: orange; text-decoration: underline; font-weight: bold;">42.09</span></td>
+      <td rowspan="4">Bert</td>
+      <td>-</td>
+      <td>74.4</td>
+      <td>73.2</td>
+      <td>69.5</td>
+      <td>68.8</td>
+      <td>86.2</td>
+      <td>87.0</td>
     </tr>
     <tr>
-      <td>3</td>
-      <td>gpt-4o</td>
-      <td>84.33</td>
-      <td>76.58</td>
-      <td>63.92</td>
-      <td>54.29</td>
-      <td>34.01</td>
-      <td>60.76</td>
-      <td>53.11</td>
-      <td>44.82</td>
-      <td>57.52</td>
-      <td>51.19</td>
-      <td>8.55</td>
-      <td>41.60</td>
+      <td>GCN</td>
+      <td>77.6</td>
+      <td>77.1</td>
+      <td>69.4</td>
+      <td>68.4</td>
+      <td>92.3</td>
+      <td>92.8</td>
     </tr>
     <tr>
-      <td>4</td>
-      <td>qwen2.5-72b-instruct</td>
-      <td>81.11</td>
-      <td>77.93</td>
-      <td>63.61</td>
-      <td>45.71</td>
-      <td>52.23</td>
-      <td>64.05</td>
-      <td>50.58</td>
-      <td>45.50</td>
-      <td>53.56</td>
-      <td>48.10</td>
-      <td>13.10</td>
-      <td>40.79</td>
+      <td>GAT</td>
+      <td>77.9</td>
+      <td>78.0</td>
+      <td>70.5</td>
+      <td>69.8</td>
+      <td>92.5</td>
+      <td>92.4</td>
     </tr>
     <tr>
-      <td>5</td>
-      <td>gpt-4-turbo</td>
-      <td>82.49</td>
-      <td>78.38</td>
-      <td>63.92</td>
-      <td>50.48</td>
-      <td>45.91</td>
-      <td>63.31</td>
-      <td>51.73</td>
-      <td>45.95</td>
-      <td>49.45</td>
-      <td>51.43</td>
-      <td>8.74</td>
-      <td>39.00</td>
+      <td>GraphSAGE</td>
+      <td>77.3</td>
+      <td>76.8</td>
+      <td>73.1</td>
+      <td><span style="text-decoration: underline;">72.7</span></td>
+      <td>92.0</td>
+      <td>92.3</td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>claude-3-opus</td>
-      <td>80.18</td>
-      <td>81.53</td>
-      <td>62.66</td>
-      <td>52.38</td>
-      <td>44.42</td>
-      <td>62.57</td>
-      <td>50.35</td>
-      <td>43.02</td>
-      <td>50.08</td>
-      <td>50.00</td>
-      <td>9.20</td>
-      <td>38.56</td>
+      <td rowspan="5">Roberta</td>
+      <td>-</td>
+      <td>78.1</td>
+      <td>76.6</td>
+      <td>67.8</td>
+      <td>68.1</td>
+      <td>84.9</td>
+      <td>85.9</td>
     </tr>
     <tr>
-      <td>7</td>
-      <td>claude-3-sonnet</td>
-      <td>76.96</td>
-      <td>76.58</td>
-      <td>59.81</td>
-      <td>42.86</td>
-      <td>48.33</td>
-      <td>60.51</td>
-      <td>50.69</td>
-      <td>44.59</td>
-      <td>48.26</td>
-      <td>45.95</td>
-      <td>11.80</td>
-      <td>38.51</td>
+      <td>GCN</td>
+      <td>80.1</td>
+      <td>79.4</td>
+      <td>68.5</td>
+      <td>68.0</td>
+      <td>92.3</td>
+      <td>92.5</td>
     </tr>
     <tr>
-      <td>8</td>
-      <td>qwen2.5-72b</td>
-      <td>80.18</td>
-      <td>73.42</td>
-      <td>60.44</td>
-      <td>47.62</td>
-      <td>52.04</td>
-      <td>62.52</td>
-      <td>50.00</td>
-      <td>43.02</td>
-      <td>45.97</td>
-      <td>49.52</td>
-      <td>11.99</td>
-      <td>37.89</td>
+      <td>GAT</td>
+      <td>79.7</td>
+      <td>78.9</td>
+      <td>70.1</td>
+      <td>71.0</td>
+      <td>92.5</td>
+      <td>92.4</td>
     </tr>
     <tr>
-      <td>9</td>
-      <td>phi-3-medium-4k-instruct</td>
-      <td>74.65</td>
-      <td>63.96</td>
-      <td>56.01</td>
-      <td>38.10</td>
-      <td>48.88</td>
-      <td>57.12</td>
-      <td>51.50</td>
-      <td>33.56</td>
-      <td>49.68</td>
-      <td>44.05</td>
-      <td>11.34</td>
-      <td>37.60</td>
+      <td>GraphSAGE</td>
+      <td>78.5</td>
+      <td>78.3</td>
+      <td>72.7</td>
+      <td>72.1</td>
+      <td>92.2</td>
+      <td>92.1</td>
     </tr>
     <tr>
-      <td>10</td>
-      <td>qwen2.5-7b-instruct</td>
-      <td>70.97</td>
-      <td>63.06</td>
-      <td>58.23</td>
-      <td>37.14</td>
-      <td>49.26</td>
-      <td>56.93</td>
-      <td>52.65</td>
-      <td>34.23</td>
-      <td>50.32</td>
-      <td>41.90</td>
-      <td>8.92</td>
-      <td>37.25</td>
+      <td>GraphSAGE</td>
+      <td>80.9</td>
+      <td>79.5</td>
+      <td><span style="text-decoration: underline;">73.2</span></td>
+      <td>70.4</td>
+      <td>94.3</td>
+      <td>94.1</td>
     </tr>
     <tr>
-      <td>11</td>
-      <td>gemini-1.5-pro</td>
-      <td>78.34</td>
-      <td>71.62</td>
-      <td>55.38</td>
-      <td>46.67</td>
-      <td>52.42</td>
-      <td>60.36</td>
-      <td>50.46</td>
-      <td>40.54</td>
-      <td>43.35</td>
-      <td>50.24</td>
-      <td>12.83</td>
-      <td>37.21</td>
+      <td colspan="8" style="text-align: center;"><b>Specialized Frameworks for Text-Attributed Graphs</b></td>
     </tr>
     <tr>
-      <td>12</td>
-      <td>phi-3-mini-4k-instruct</td>
-      <td>69.12</td>
-      <td>59.46</td>
-      <td>55.38</td>
-      <td>34.29</td>
-      <td>44.80</td>
-      <td>53.78</td>
-      <td>49.42</td>
-      <td>37.84</td>
-      <td>45.41</td>
-      <td>41.43</td>
-      <td>9.57</td>
-      <td>35.56</td>
+      <td colspan="2">MPAD</td>
+      <td>80.1</td>
+      <td>78.9</td>
+      <td>68.8</td>
+      <td>68.0</td>
+      <td>93.1</td>
+      <td>92.8</td>
     </tr>
     <tr>
-      <td>13</td>
-      <td>gpt-3.5-turbo</td>
-      <td>63.13</td>
-      <td>66.67</td>
-      <td>5854</td>
-      <td>23.81</td>
-      <td>47.77</td>
-      <td>53.98</td>
-      <td>42.51</td>
-      <td>41.22</td>
-      <td>49.60</td>
-      <td>39.29</td>
-      <td>6.41</td>
-      <td>34.70</td>
+      <td colspan="2">GLEM</td>
+      <td><span style="text-decoration: underline;">81.4</span></td>
+      <td><span style="text-decoration: underline;">79.8</span></td>
+      <td>72.6</td>
+      <td>71.2</td>
+      <td>92.5</td>
+      <td>93.3</td>
     </tr>
     <tr>
-      <td>14</td>
-      <td>gemma2-9b-it</td>
-      <td>72.81</td>
-      <td>50.45</td>
-      <td>55.70</td>
-      <td>43.81</td>
-      <td>40.52</td>
-      <td>53.54</td>
-      <td>45.62</td>
-      <td>32.88</td>
-      <td>47.15</td>
-      <td>44.52</td>
-      <td>7.90</td>
-      <td>34.63</td>
+      <td colspan="2">GraphFormers</td>
+      <td>75.3</td>
+      <td>75.1</td>
+      <td>66.8</td>
+      <td>67.5</td>
+      <td>85.6</td>
+      <td>86.4</td>
     </tr>
     <tr>
-      <td>15</td>
-      <td>yi-1.5-34b-chat</td>
-      <td>68.66</td>
-      <td>53.60</td>
-      <td>56.96</td>
-      <td>40.95</td>
-      <td>39.96</td>
-      <td>52.95</td>
-      <td>40.90</td>
-      <td>33.33</td>
-      <td>48.34</td>
-      <td>44.76</td>
-      <td>7.16</td>
-      <td>33.87</td>
+      <td colspan="2">LLAGA</td>
+      <td>77.2</td>
+      <td>77.5</td>
+      <td>71.7</td>
+      <td>72.0</td>
+      <td>90.1</td>
+      <td>90.8</td>
     </tr>
     <tr>
-      <td>16</td>
-      <td>llama-3.1-70b-instruct</td>
-      <td>80.18</td>
-      <td>74.77</td>
-      <td>61.39</td>
-      <td>40.00</td>
-      <td>44.61</td>
-      <td>60.22</td>
-      <td>44.24</td>
-      <td>38.06</td>
-      <td>45.09</td>
-      <td>38.57</td>
-      <td>7.99</td>
-      <td>33.67</td>
+      <td colspan="2">InstructGLM</td>
+      <td>75.4</td>
+      <td>74.5</td>
+      <td>72.2</td>
+      <td>70.6</td>
+      <td><span style="text-decoration: underline;">94.3</span></td>
+      <td><span style="text-decoration: underline;">94.2</span></td>
     </tr>
     <tr>
-      <td>17</td>
-      <td>llama-3.1-70b</td>
-      <td>75.58</td>
-      <td>51.80</td>
-      <td>5759</td>
-      <td>45.71</td>
-      <td>47.77</td>
-      <td>56.97</td>
-      <td>43.89</td>
-      <td>35.81</td>
-      <td>41.46</td>
-      <td>45.48</td>
-      <td>10.50</td>
-      <td>33.60</td>
+      <td colspan="2"><b>GDL4LLM</b></td>
+      <td><b>81.9</b></td>
+      <td><b>81.4</b></td>
+      <td><b>74.3</b></td>
+      <td><b>73.2</b></td>
+      <td><b>94.6</b></td>
+      <td><b>94.6</b></td>
     </tr>
     <tr>
-      <td>18</td>
-      <td>qwen2.5-7b</td>
-      <td>69.12</td>
-      <td>54.95</td>
-      <td>54.11</td>
-      <td>40.00</td>
-      <td>49.07</td>
-      <td>54.62</td>
-      <td>43.55</td>
-      <td>34.46</td>
-      <td>43.43</td>
-      <td>45.00</td>
-      <td>8.36</td>
-      <td>33.37</td>
+      <td colspan="8" style="text-align: center;"><b>Fine-tuned Large Language Models +/- GNNs</b></td>
     </tr>
     <tr>
-      <td>19</td>
-      <td>yi-1.5-34b</td>
-      <td>70.97</td>
-      <td>58.11</td>
-      <td>5759</td>
-      <td>41.90</td>
-      <td>48.33</td>
-      <td>56.43</td>
-      <td>40.55</td>
-      <td>35.59</td>
-      <td>42.96</td>
-      <td>43.10</td>
-      <td>7.25</td>
-      <td>32.22</td>
+      <td>GraphAdapter</td>
+      <td>-</td>
+      <td>80.8</td>
+      <td>80.4</td>
+      <td>71.9</td>
+      <td>71.7</td>
+      <td><span style="text-decoration: underline;">94.1</span></td>
+      <td><span style="text-decoration: underline;">93.4</span></td>
     </tr>
     <tr>
-      <td>20</td>
-      <td>llama-3-8b-instruct</td>
-      <td>60.83</td>
-      <td>49.55</td>
-      <td>52.22</td>
-      <td>29.52</td>
-      <td>47.40</td>
-      <td>50.15</td>
-      <td>43.78</td>
-      <td>26.35</td>
-      <td>41.30</td>
-      <td>36.19</td>
-      <td>9.76</td>
-      <td>31.34</td>
+      <td>Llama3-8b</td>
+      <td>-</td>
+      <td>80.7</td>
+      <td>80.6</td>
+      <td>71.9</td>
+      <td>71.2</td>
+      <td>92.0</td>
+      <td>91.6</td>
     </tr>
     <tr>
-      <td>21</td>
-      <td>mixtral-8x7b-instruct-v0.1</td>
-      <td>59.91</td>
-      <td>45.05</td>
-      <td>34.18</td>
-      <td>16.19</td>
-      <td>43.12</td>
-      <td>41.36</td>
-      <td>42.97</td>
-      <td>31.31</td>
-      <td>39.08</td>
-      <td>34.52</td>
-      <td>8.36</td>
-      <td>30.48</td>
+      <td>Llama3-8b</td>
+      <td>GraphSAGE</td>
+      <td><span style="text-decoration: underline;">82.0</span></td>
+      <td><span style="text-decoration: underline;">81.3</span></td>
+      <td><span style="text-decoration: underline;">72.8</span></td>
+      <td><span style="text-decoration: underline;">73.0</span></td>
+      <td>93.1</td>
+      <td>92.8</td>
     </tr>
     <tr>
-      <td>22</td>
-      <td>llama-3.1-8b-instruct</td>
-      <td>63.13</td>
-      <td>51.80</td>
-      <td>56.96</td>
-      <td>25.71</td>
-      <td>41.82</td>
-      <td>50.49</td>
-      <td>39.06</td>
-      <td>22.97</td>
-      <td>41.85</td>
-      <td>33.57</td>
-      <td>8.55</td>
-      <td>29.54</td>
-    </tr>
-    <tr>
-      <td>23</td>
-      <td>mixtral-8x7b-v0.1</td>
-      <td>67.28</td>
-      <td>39.64</td>
-      <td>53.48</td>
-      <td>39.05</td>
-      <td>45.72</td>
-      <td>51.38</td>
-      <td>39.06</td>
-      <td>31.53</td>
-      <td>36.00</td>
-      <td>36.19</td>
-      <td>8.83</td>
-      <td>29.00</td>
-    </tr>
-    <tr>
-      <td>24</td>
-      <td>llama-3.2-3b-instruct</td>
-      <td>57.14</td>
-      <td>39.19</td>
-      <td>49.05</td>
-      <td>23.81</td>
-      <td>34.94</td>
-      <td>43.37</td>
-      <td>40.55</td>
-      <td>21.40</td>
-      <td>38.29</td>
-      <td>32.62</td>
-      <td>8.09</td>
-      <td>28.36</td>
-    </tr>
-    <tr>
-      <td>25</td>
-      <td>yi-1.5-6b</td>
-      <td>53.00</td>
-      <td>59.01</td>
-      <td>51.27</td>
-      <td>30.48</td>
-      <td>42.75</td>
-      <td>48.08</td>
-      <td>33.53</td>
-      <td>29.95</td>
-      <td>39.16</td>
-      <td>35.00</td>
-      <td>6.13</td>
-      <td>27.80</td>
-    </tr>
-    <tr>
-      <td>26</td>
-      <td>qwen1.5-7b</td>
-      <td>58.99</td>
-      <td>54.50</td>
-      <td>47.15</td>
-      <td>37.14</td>
-      <td>38.29</td>
-      <td>47.10</td>
-      <td>36.64</td>
-      <td>33.11</td>
-      <td>32.99</td>
-      <td>35.95</td>
-      <td>6.78</td>
-      <td>27.16</td>
-    </tr>
-    <tr>
-      <td>27</td>
-      <td>mistral-7b-v0.1</td>
-      <td>58.06</td>
-      <td>42.79</td>
-      <td>50.63</td>
-      <td>37.14</td>
-      <td>43.87</td>
-      <td>48.18</td>
-      <td>33.06</td>
-      <td>29.05</td>
-      <td>34.10</td>
-      <td>35.24</td>
-      <td>7.16</td>
-      <td>26.33</td>
-    </tr>
-    <tr>
-      <td>28</td>
-      <td>mistral-7b-instruct-v0.1</td>
-      <td>57.60</td>
-      <td>45.05</td>
-      <td>40.82</td>
-      <td>21.90</td>
-      <td>42.19</td>
-      <td>43.27</td>
-      <td>35.48</td>
-      <td>27.48</td>
-      <td>34.41</td>
-      <td>33.33</td>
-      <td>6.04</td>
-      <td>26.28</td>
-    </tr>
-    <tr>
-      <td>29.0</td>
-      <td>llama-3.1-8b</td>
-      <td>62.67</td>
-      <td>40.54</td>
-      <td>5158</td>
-      <td>30.48</td>
-      <td>44.98</td>
-      <td>48.82</td>
-      <td>34.22</td>
-      <td>28.83</td>
-      <td>32.52</td>
-      <td>33.57</td>
-      <td>7.99</td>
-      <td>26.11</td>
-    </tr>
-    <tr>
-      <td>30</td>
-      <td>openchat-3.5</td>
-      <td>60.83</td>
-      <td>39.64</td>
-      <td>49.68</td>
-      <td>25.71</td>
-      <td>36.25</td>
-      <td>44.94</td>
-      <td>35.94</td>
-      <td>22.75</td>
-      <td>33.86</td>
-      <td>30.24</td>
-      <td>8.46</td>
-      <td>26.01</td>
-    </tr>
-    <tr>
-      <td>31</td>
-      <td>yi-1.5-6b-chat</td>
-      <td>37.33</td>
-      <td>53.15</td>
-      <td>48.10</td>
-      <td>25.71</td>
-      <td>38.85</td>
-      <td>41.60</td>
-      <td>30.30</td>
-      <td>32.43</td>
-      <td>32.99</td>
-      <td>34.05</td>
-      <td>6.88</td>
-      <td>25.56</td>
-    </tr>
-    <tr>
-      <td>32</td>
-      <td>llama-3-8b</td>
-      <td>59.91</td>
-      <td>35.14</td>
-      <td>50.95</td>
-      <td>26.67</td>
-      <td>43.31</td>
-      <td>46.61</td>
-      <td>32.37</td>
-      <td>24.10</td>
-      <td>31.09</td>
-      <td>29.29</td>
-      <td>7.53</td>
-      <td>24.19</td>
-    </tr>
-    <tr>
-      <td>33</td>
-      <td>deepseek-7b-chat</td>
-      <td>49.31</td>
-      <td>27.48</td>
-      <td>45.57</td>
-      <td>20.00</td>
-      <td>31.41</td>
-      <td>38.02</td>
-      <td>30.76</td>
-      <td>18.92</td>
-      <td>34.97</td>
-      <td>27.62</td>
-      <td>5.11</td>
-      <td>23.67</td>
-    </tr>
-    <tr>
-      <td>34</td>
-      <td>qwen1.5-7b-chat</td>
-      <td>32.26</td>
-      <td>50.00</td>
-      <td>11.71</td>
-      <td>13.33</td>
-      <td>35.32</td>
-      <td>26.67</td>
-      <td>27.42</td>
-      <td>26.58</td>
-      <td>27.22</td>
-      <td>33.57</td>
-      <td>6.41</td>
-      <td>22.35</td>
-    </tr>
-    <tr>
-      <td>35</td>
-      <td>llama-2-7b-chat</td>
-      <td>38.25</td>
-      <td>36.49</td>
-      <td>39.24</td>
-      <td>13.33</td>
-      <td>35.50</td>
-      <td>35.07</td>
-      <td>26.04</td>
-      <td>16.89</td>
-      <td>31.49</td>
-      <td>26.67</td>
-      <td>5.30</td>
-      <td>21.32</td>
-    </tr>
-    <tr>
-      <td>36</td>
-      <td>deepseek-7b-base</td>
-      <td>49.77</td>
-      <td>36.49</td>
-      <td>44.94</td>
-      <td>18.10</td>
-      <td>36.62</td>
-      <td>40.08</td>
-      <td>27.88</td>
-      <td>18.47</td>
-      <td>28.16</td>
-      <td>25.24</td>
-      <td>5.39</td>
-      <td>20.73</td>
-    </tr>
-    <tr>
-      <td>37</td>
-      <td>llama-2-7b</td>
-      <td>54.38</td>
-      <td>15.77</td>
-      <td>44.62</td>
-      <td>19.05</td>
-      <td>36.43</td>
-      <td>38.75</td>
-      <td>26.61</td>
-      <td>18.47</td>
-      <td>27.29</td>
-      <td>24.05</td>
-      <td>6.78</td>
-      <td>20.43</td>
-    </tr>
-    <tr>
-      <td>38</td>
-      <td>llama-3.2-1b-instruct</td>
-      <td>41.47</td>
-      <td>40.99</td>
-      <td>37.66</td>
-      <td>14.29</td>
-      <td>25.09</td>
-      <td>33.10</td>
-      <td>28.00</td>
-      <td>13.06</td>
-      <td>24.68</td>
-      <td>24.76</td>
-      <td>6.69</td>
-      <td>19.38</td>
-    </tr>
-    <tr>
-      <td>39</td>
-      <td>gemma-7b-it</td>
-      <td>15.21</td>
-      <td>37.84</td>
-      <td>45.25</td>
-      <td>8.57</td>
-      <td>13.38</td>
-      <td>25.83</td>
-      <td>13.02</td>
-      <td>1.80</td>
-      <td>35.52</td>
-      <td>20.24</td>
-      <td>10.04</td>
-      <td>18.74</td>
-    </tr>
-    <tr>
-      <td>40</td>
-      <td>gemma2-9b</td>
-      <td>16.13</td>
-      <td>47.75</td>
-      <td>11.71</td>
-      <td>9.52</td>
-      <td>11.34</td>
-      <td>16.26</td>
-      <td>11.29</td>
-      <td>8.33</td>
-      <td>10.60</td>
-      <td>11.67</td>
-      <td>3.62</td>
-      <td>8.77</td>
+      <td colspan="2"><b>GDL4LLM w/ attr</b></td>
+      <td><b>83.9</b></td>
+      <td><b>82.8</b></td>
+      <td><b>74.0</b></td>
+      <td><b>73.4</b></td>
+      <td><b>95.8</b></td>
+      <td><b>95.5</b></td>
     </tr>
   </tbody>
 </table>
 </div>
-
   <!-- Images Section -->
   <div class="images section">
     <h2 style="font-size: 18px;">Overall framework and pipeline</h2>
