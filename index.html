@@ -420,22 +420,13 @@ pre {
   <p style="font-size: 16px; text-align: center;">
     <b>LLMs tend to ‘guess’ answers. </b><br> A detailed analysis of Q→AR scores reveals that despite their relatively high accuracy in answering questions (Q→A), many LLMs struggle significantly to provide coherent and accurate rationales.
   </p>
-	<br>
 
-  <!-- Second image with text below -->
-  <img src="assets/radar.png" alt="Radar Chart">
-  <p style="font-size: 16px; text-align: center;">
-    <b>LLMs are not good at non-MC questions.</b> <br> We visualize the radar diagrams to showcase the expertise of LLMs on different types of questions. Performance on non-MC questions presents another significant challenge for LLMs. Many models demonstrate reasonable performance on MC, yet their accuracy drops significantly when handling OE or FB questions, which require deeper reasoning and articulation.
-  </p>
-<br>
-  <!-- Third image with text on the right -->
+  <!-- Second image with text on the right -->
   <div style="display: flex; align-items: center; gap: 20px;">
     <img src="assets/topic.png" alt="Topic Chart" style="width: 400px; height: 600px">
     <p style="font-size: 16px;">
 	<b>Discipline-specific insights</b><br>
-      \((i)\) <b>Context-intensive tasks</b>. Topics such as AI Introduction and Ethics of CS and AI require a solid understanding of conceptual frameworks. All three state-of-the-art LLMs demonstrate a surprisingly low performance with around 12.5% and 6.5% Q→AR. This suggests challenges in grasping nuanced ethical considerations. Similarly, scores in the AI Introduction domain reflect the models’ difficulty in conveying complex ideas coherently. These results highlight that while LLMs possess substantial factual knowledge, they often struggle with articulating and rationalizing that knowledge in contextually rich environments.
-      <br><br><br>
-      \((ii)\) <b>Reasoning-intensive tasks</b>. Mathematics and Computer Architecture reflect a different situation compared with context-intensive tasks. All three models could perform significantly satisfying the Q→A criteria; however, their performance decreases sharply on Q→AR with over a 30% accuracy drop in average. This reflects the necessity for improved training techniques that focus on fostering deeper cognition for reasoning-intensive tasks.
+     We examine two critical hyperparameters: the length of sampled graph sentences l and the number of sampled sentences k. The left figure shows optimal performance at l=5 and k=10, and the performance gain is marginal when approaching this value. These results demonstrate our framework's effectiveness in modeling high-order structural information, such as inter-order dependencies. For instance, a length of 5 captures fourth-order structural information, whereas GNNs, often converging in about two layers, typically capture only second-order information.
     </p>
   </div>
 </div>
@@ -443,12 +434,12 @@ pre {
   <!-- Contact Section -->
   <section class="section contact">
     <h2>Contact</h2>
-    <p>For inquiries or contributions, please contact us at <a href="mailto:hanson.dong@connect.polyu.hk">hanson.dong@connect.polyu.hk</a>.</p>
+    <p>For inquiries or contributions, please contact us at <a href="mailto:huachi.zhou@connect.polyu.hk">huachi.zhou@connect.polyu.hk</a>.</p>
   </section>
 </div>
 
 <footer>
-  <p>&copy; 2024 CLR-Bench. DEEP Lab, The Hong Kong Polytechnic University. All rights reserved.</p>
+  <p>&copy; 2025 GDL4LLM. DEEP Lab, The Hong Kong Polytechnic University. All rights reserved.</p>
 </footer>
 
 </body>
