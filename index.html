@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLR-Bench Leaderboard</title>
+  <title>Each Graph is a New Language</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -420,14 +420,17 @@ pre {
   <p style="font-size: 16px; text-align: center;">
     <b>(i)Pre-training significantly enhances GDL4LLM performance, especially when combined with textual attributes in prompts, creating a synergistic effect where structural understanding complements semantic comprehension. (ii)GDL4LLM performs better with Llama-3 than Llama-2 due to architectural improvements and better training data, with ablation studies confirming the effectiveness of the pre-training objective across different LLM architectures.
 
-  <!-- Second image with text on the right -->
-  <div style="display: flex; align-items: center; gap: 20px;">
-    <img src="assets/tab6.png" alt="Topic Chart" style="width: 400px; height: 600px">
-    <p style="font-size: 16px;">
-	<b>Discipline-specific insights</b><br>
-     We examine two critical hyperparameters: the length of sampled graph sentences l and the number of sampled sentences k. The left figure shows optimal performance at l=5 and k=10, and the performance gain is marginal when approaching this value. These results demonstrate our framework's effectiveness in modeling high-order structural information, such as inter-order dependencies. For instance, a length of 5 captures fourth-order structural information, whereas GNNs, often converging in about two layers, typically capture only second-order information.
-    </p>
-  </div>
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+    <div style="flex: 1; max-width: 60%;">
+        <img src="assets/tab6.png" alt="Hyperparameter Analysis" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    </div>
+    <div style="flex: 1; max-width: 40%;">
+        <p style="font-size: 16px;">
+            <b>Specific insights</b><br>
+            We examine two critical hyperparameters: the length of sampled graph sentences l and the number of sampled sentences k. The figure shows optimal performance at l=5 and k=10, and the performance gain is marginal when approaching this value. These results demonstrate our framework's effectiveness in modeling high-order structural information, such as inter-order dependencies. For instance, a length of 5 captures fourth-order structural information, whereas GNNs, often converging in about two layers, typically capture only second-order information.
+        </p>
+    </div>
 </div>
 
   <!-- Contact Section -->
