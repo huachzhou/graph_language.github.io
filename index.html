@@ -407,7 +407,7 @@ pre {
   <!-- Images Section -->
   <div class="images section">
     <h2 style="font-size: 18px;">Overall framework and pipeline</h2>
-    <img src="assets/gdl4llm.pdf" alt="Framework Diagram">
+    <img src="assets/gdl4llm.png" alt="Framework Diagram">
     <p style="font-size: 16px;">The figure demonstrates a comparison between mainstream methods and GDL4LLM for node-classification task. Figure (a) utilizes LLMs to embed node attributes and leverages GNN to aggregate the embeddings. Figure (b) presents the descriptions of graph structure centered around target nodes. Figure (c) illustrates how LLMs are pre-trained to capture graph structures through graph language learning, and how textual attributes are further integrated to enhance LLMs fine-tuning.</p>
   </div>
 <br>	
@@ -416,13 +416,13 @@ pre {
   <h2 style="font-size: 18px;">Observations and Findings</h2>
 
   <!-- First image with text below -->
-  <img src="assets/bar.png" alt="Bar Chart">
+  <img src="assets/bar chart.png" alt="Bar Chart">
   <p style="font-size: 16px; text-align: center;">
     <b>(i)Pre-training significantly enhances GDL4LLM performance, especially when combined with textual attributes in prompts, creating a synergistic effect where structural understanding complements semantic comprehension. (ii)GDL4LLM performs better with Llama-3 than Llama-2 due to architectural improvements and better training data, with ablation studies confirming the effectiveness of the pre-training objective across different LLM architectures.
 
   <!-- Second image with text on the right -->
   <div style="display: flex; align-items: center; gap: 20px;">
-    <img src="assets/tab6.pdf" alt="Topic Chart" style="width: 400px; height: 600px">
+    <img src="assets/tab6.png" alt="Topic Chart" style="width: 400px; height: 600px">
     <p style="font-size: 16px;">
 	<b>Discipline-specific insights</b><br>
      We examine two critical hyperparameters: the length of sampled graph sentences l and the number of sampled sentences k. The left figure shows optimal performance at l=5 and k=10, and the performance gain is marginal when approaching this value. These results demonstrate our framework's effectiveness in modeling high-order structural information, such as inter-order dependencies. For instance, a length of 5 captures fourth-order structural information, whereas GNNs, often converging in about two layers, typically capture only second-order information.
