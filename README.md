@@ -1,1 +1,1 @@
-CLR-Bench: Evaluating Large Language Models in College-level Reasoning
+Each Graph is a New Language: Graph Learning with LLMs
