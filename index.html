@@ -421,14 +421,20 @@ pre {
     <b>(i)Pre-training significantly enhances GDL4LLM performance, especially when combined with textual attributes in prompts, creating a synergistic effect where structural understanding complements semantic comprehension. (ii)GDL4LLM performs better with Llama-3 than Llama-2 due to architectural improvements and better training data, with ablation studies confirming the effectiveness of the pre-training objective across different LLM architectures.
 
 
-<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
-    <div style="flex: 1; max-width: 60%;">
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 20px 0;">
+    <!-- Left side: Image (taking 55% of the space) -->
+    <div style="flex: 0 0 55%;">
         <img src="assets/tab6.png" alt="Hyperparameter Analysis" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     </div>
-    <div style="flex: 1; max-width: 40%;">
-        <p style="font-size: 16px;">
-            <b>Specific insights</b><br>
-            We examine two critical hyperparameters: the length of sampled graph sentences l and the number of sampled sentences k. The figure shows optimal performance at l=5 and k=10, and the performance gain is marginal when approaching this value. These results demonstrate our framework's effectiveness in modeling high-order structural information, such as inter-order dependencies. For instance, a length of 5 captures fourth-order structural information, whereas GNNs, often converging in about two layers, typically capture only second-order information.
+    
+    <!-- Right side: Text (taking 40% of the space) -->
+    <div style="flex: 0 0 40%; padding-left: 20px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px;">Discipline-specific insights</h3>
+        <p style="font-size: 16px; line-height: 1.5;">
+            We examine two critical hyperparameters: the length of sampled graph sentences l and the number of sampled sentences k. The figure shows optimal performance at l=5 and k=10, and the performance gain is marginal when approaching this value. 
+        </p>
+        <p style="font-size: 16px; line-height: 1.5; margin-top: 10px;">
+            These results demonstrate our framework's effectiveness in modeling high-order structural information, such as inter-order dependencies. For instance, a length of 5 captures fourth-order structural information, whereas GNNs, often converging in about two layers, typically capture only second-order information.
         </p>
     </div>
 </div>
