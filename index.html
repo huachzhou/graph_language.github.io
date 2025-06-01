@@ -416,37 +416,41 @@ pre {
 </section>
 
 <section class="section">
-  <h2 style="font-size: 24px; margin-bottom: 20px;">Observations and Findings</h2>
+  <h2 style="font-size: 24px; margin-bottom: 20px; color: #4285f4;">Observations and Findings</h2>
 
-  <!-- First image with text below -->
-  <div class="image-container" style="margin-bottom: 20px;">
-    <img src="assets/bar chart.png" alt="Bar Chart" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <!-- First image with text below - Expanded to use full width -->
+  <div class="image-container" style="margin-bottom: 20px; text-align: center;">
+    <img src="assets/bar chart.png" alt="Performance Comparison of GDL4LLM Models" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
+  
   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-    <b>(i)</b> Pre-training significantly enhances GDL4LLM performance, especially when combined with textual attributes in prompts, creating a synergistic effect where structural understanding complements semantic comprehension. <br><br>
+    <b>(i)</b> Pre-training significantly enhances GDL4LLM performance, especially when combined with textual attributes in prompts, creating a synergistic effect where structural understanding complements semantic comprehension.
+  </p>
+  
+  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
     <b>(ii)</b> GDL4LLM performs better with Llama-3 than Llama-2 due to architectural improvements and better training data, with ablation studies confirming the effectiveness of the pre-training objective across different LLM architectures.
   </p>
 
-  <!-- Side-by-side image and text layout -->
-  <div style="display: flex; flex-direction: row; align-items: flex-start; margin: 20px 0; gap: 20px;">
-    <!-- Left side: Image -->
-    <div style="flex: 0 0 55%; max-width: 55%;">
+  <!-- Side-by-side image and text layout with better size balance -->
+  <div style="display: flex; flex-direction: row; align-items: flex-start; margin: 20px 0; gap: 30px;">
+    <!-- Left side: Image - reduced to 45% -->
+    <div style="flex: 0 0 45%; max-width: 45%;">
       <img src="assets/tab6.png" alt="Hyperparameter Analysis" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     </div>
     
-    <!-- Right side: Text -->
-    <div style="flex: 1; padding-left: 20px;">
-      <h3 style="font-size: 18px; margin-bottom: 15px; color: #444;">Discipline-specific insights</h3>
-      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+    <!-- Right side: Text - increased to 50% -->
+    <div style="flex: 0 0 50%; padding-left: 10px;">
+      <h3 style="font-size: 20px; margin-bottom: 15px; color: #444;">Discipline-specific insights</h3>
+      <p style="font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
         We examine two critical hyperparameters: the length of sampled graph sentences l and the number of sampled sentences k. The figure shows optimal performance at l=5 and k=10, and the performance gain is marginal when approaching this value.
       </p>
-      <p style="font-size: 16px; line-height: 1.6;">
+      <p style="font-size: 16px; line-height: 1.7;">
         These results demonstrate our framework's effectiveness in modeling high-order structural information, such as inter-order dependencies. For instance, a length of 5 captures fourth-order structural information, whereas GNNs, often converging in about two layers, typically capture only second-order information.
       </p>
     </div>
   </div>
 </section>
-
+	  
 <!-- Contact Section -->
 <section class="section">
   <h2 style="font-size: 24px; margin-bottom: 20px;">Contact</h2>
